@@ -1,0 +1,17 @@
+{
+    "name": "@lumeweb/relay-plugin-ipfs",
+    "type": "module",
+    "version": "0.1.0",
+    "scripts": {
+        "build": "node build.js"
+    },
+    "devDependencies": {
+        "@lumeweb/relay-types": "https://github.com/LumeWeb/relay-types.git",
+        "esbuild": "^0.15.5"
+    },
+    "dependencies": {
+        "ipfs-core": "^0.15.4",
+        "ipfs-http-response": "^3.0.4",
+        "multiformats": "^9.7.1"
+    }
+}

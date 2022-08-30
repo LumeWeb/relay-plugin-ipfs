@@ -3,15 +3,19 @@
     "type": "module",
     "version": "0.1.0",
     "scripts": {
-        "build": "node build.js"
+        "build": "rimraf node_modules/*/node_modules/ipfs-utils node_modules/@achingbrain/nat-port-mapper/node_modules/default-gateway && bash build.sh"
     },
     "devDependencies": {
         "@lumeweb/relay-types": "https://github.com/LumeWeb/relay-types.git",
-        "esbuild": "^0.15.5"
+        "esbuild": "^0.15.5",
+        "rimraf": "^3.0.2"
     },
     "dependencies": {
+        "@achingbrain/ssdp": "https://github.com/LumeWeb/ssdp.git",
+        "default-gateway": "https://github.com/LumeWeb/default-gateway.git",
         "ipfs-core": "^0.15.4",
         "ipfs-http-response": "^3.0.4",
+        "ipfs-utils": "https://github.com/LumeWeb/js-ipfs-utils.git",
         "multiformats": "^9.7.1"
     }
 }

@@ -5,5 +5,8 @@ esbuild.buildSync({
     outfile: 'dist/ipfs.js',
     format: 'cjs',
     bundle: true,
-    platform: "node"
+    platform: "node",
+    define: {
+        __dirname: '"./plugins/leveldown"'
+    }
 })

@@ -9,7 +9,7 @@ import { CID } from "multiformats/cid";
 // @ts-ignore
 import toStream from "it-to-stream";
 import type { StatResult } from "ipfs-core/dist/src/components/files/stat";
-import * as IPFS from "ipfs-core";
+import * as IPFS from "ipfs-http-client";
 
 interface StatFileResponse {
   exists: boolean;
@@ -26,7 +26,7 @@ interface StatFileSubfile {
   size: number;
 }
 
-let client: IPFS.IPFS;
+let client: IPFS.IPFSHTTPClient;
 
 import { utils } from "ipfs-http-response";
 
@@ -138,7 +138,6 @@ async function fileExists(
   path?: string,
   fullPath?: string
 ): Promise<Error | StatResult> {
-  client = client as IPFS.IPFS;
   let ipfsPath = normalizePath(hash, path, fullPath);
   try {
     const ret = await client.files.stat(`/ipfs/${ipfsPath}`);
@@ -162,7 +161,7 @@ async function resolveIpns(
 const plugin: Plugin = {
   name: "ipfs",
   async plugin(api: PluginAPI): Promise<void> {
-    client = await IPFS.create();
+    client = await IPFS.create({ host: "127.0.0.1" });
     api.registerMethod("stat_ipfs", {
       cacheable: false,
       async handler(request: RPCRequest): Promise<RPCResponse | null> {

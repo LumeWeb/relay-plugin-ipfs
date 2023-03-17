@@ -149,36 +149,6 @@ export default class PeerManager {
       this._peers.delete(pubkey);
     }
   }
-  /*
-
-  private _registerKeyExchangeMessage(peer: Peer, channel: any) {
-    const self = this;
-    const message = channel.addMessage({
-      encoding: {
-        preencode(state: any, m: PeerInfoResult) {
-          fixed32.preencode(state, m.publicKey);
-          raw.preencode(state, m.libp2pPublicKey);
-        },
-        encode(state: any, m: PeerInfoResult) {
-          fixed32.encode(state, m.publicKey);
-          raw.encode(state, m.libp2pPublicKey);
-        },
-        decode(state: any, m: any): Uint8Array {
-          return fixed32.decode(state, m);
-        },
-      },
-      onmessage: async (pubkey: Uint8Array) => {
-        this.get(peer.socket.remotePublicKey)?.messages.keyExchange?.send({
-          publicKey: pubkey,
-          libp2pPublicKey: (await getIpfsPeerId(self._api)).toBytes(),
-        });
-      },
-    });
-    this.update(peer.socket.remotePublicKey, {
-      messages: { keyExchange: message },
-    });
-  }
-*/
 
   private _registerOpenSocketMessage(peer: Peer, channel: any) {
     const self = this;

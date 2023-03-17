@@ -3,19 +3,30 @@
     "type": "module",
     "version": "0.1.0",
     "scripts": {
-        "build": "rimraf node_modules/*/node_modules/ipfs-utils node_modules/@achingbrain/nat-port-mapper/node_modules/default-gateway && bash build.sh"
+        "build": "node build.js"
     },
     "devDependencies": {
-        "@lumeweb/relay-types": "https://github.com/LumeWeb/relay-types.git",
-        "esbuild": "^0.15.5",
+        "@libp2p/interface-connection-encrypter": "^3.0.6",
+        "@libp2p/interface-peer-id": "^2.0.1",
+        "@libp2p/multistream-select": "^3.1.2",
+        "@lumeweb/relay-types": "git+https://git.lumeweb.com/LumeWeb/relay-types.git",
+        "@types/b4a": "^1.6.0",
+        "@types/streamx": "^2.9.1",
+        "esbuild": "^0.15.18",
+        "prettier": "^2.8.4",
         "rimraf": "^3.0.2"
     },
     "dependencies": {
-        "@achingbrain/ssdp": "https://github.com/LumeWeb/ssdp.git",
-        "default-gateway": "https://github.com/LumeWeb/default-gateway.git",
-        "ipfs-core": "^0.15.4",
-        "ipfs-http-response": "^3.0.4",
-        "ipfs-utils": "https://github.com/LumeWeb/js-ipfs-utils.git",
-        "multiformats": "^9.7.1"
+        "@chainsafe/libp2p-noise": "^11.0.1",
+        "@libp2p/interface-connection": "^3.1.0",
+        "@libp2p/peer-id": "^2.0.2",
+        "@lumeweb/libhyperproxy": "git+https://git.lumeweb.com/LumeWeb/libhyperproxy.git",
+        "@multiformats/multiaddr": "^11.6.1",
+        "b4a": "^1.6.2",
+        "compact-encoding": "^2.11.0",
+        "debug-stream": "^3.0.1",
+        "serialize-error": "^11.0.0",
+        "stream-to-it": "^0.2.4",
+        "streamx": "^2.13.2"
     }
 }

@@ -58,14 +58,6 @@ export class TCPSocket extends Duplex {
   }
 
   public connect() {
-    ["timeout", "error", "connect", "end", "destroy", "close"].forEach(
-      (event) => {
-        this._socket?.on(event, (...args: any) =>
-          this.emit(event as any, ...args)
-        );
-      }
-    );
-
     this.on("error", (err: Error) => {
       this._peer.messages.errorSocket?.send({
         ...this._getSocketRequest(),
@@ -88,6 +80,14 @@ export class TCPSocket extends Duplex {
     }
 
     this._socket = net.connect(this._options);
+    ["timeout", "error", "connect", "end", "destroy", "close"].forEach(
+      (event) => {
+        this._socket?.on(event, (...args: any) =>
+          this.emit(event as any, ...args)
+        );
+      }
+    );
+
     this._socket.pipe(this as any);
     this.pipe(this._socket);
   }

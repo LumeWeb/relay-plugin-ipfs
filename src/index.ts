@@ -14,7 +14,7 @@ const plugin: Plugin = {
     const proxy = new MultiSocketProxy({
       swarm: api.swarm,
       protocol: PROTOCOL,
-      allowedPorts: [5001, 5002],
+      allowedPorts: [4001, 4002],
       server: true,
     });
     api.swarm.join(api.util.crypto.createHash(PROTOCOL));

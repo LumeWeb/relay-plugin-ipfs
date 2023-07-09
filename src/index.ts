@@ -1,12 +1,7 @@
-import type { Plugin, PluginAPI } from "@lumeweb/relay-types";
+import type { Plugin, PluginAPI } from "@lumeweb/interface-relay";
 import { MultiSocketProxy } from "@lumeweb/libhyperproxy";
 
 const PROTOCOL = "lumeweb.proxy.ipfs";
-
-interface PeerInfoResult {
-  publicKey: Uint8Array;
-  libp2pPublicKey: Uint8Array;
-}
 
 const plugin: Plugin = {
   name: "ipfs",

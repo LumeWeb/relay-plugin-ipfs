@@ -3,30 +3,17 @@
     "type": "module",
     "version": "0.1.0",
     "scripts": {
-        "build": "node build.js"
+        "prepare": "presetter bootstrap",
+        "build": "run build"
     },
+    "readme": "ERROR: No README data found!",
+    "_id": "@lumeweb/relay-plugin-ipfs@0.1.0",
     "devDependencies": {
-        "@libp2p/interface-connection-encrypter": "^3.0.6",
-        "@libp2p/interface-peer-id": "^2.0.1",
-        "@libp2p/multistream-select": "^3.1.4",
-        "@lumeweb/relay-types": "git+https://git.lumeweb.com/LumeWeb/relay-types.git",
-        "@types/b4a": "^1.6.0",
-        "@types/streamx": "^2.9.1",
-        "esbuild": "^0.15.18",
-        "prettier": "^2.8.7",
-        "rimraf": "^3.0.2"
+        "@lumeweb/presetter-relay-plugin-preset": "^0.1.0-develop.8",
+        "presetter": "*"
     },
     "dependencies": {
-        "@chainsafe/libp2p-noise": "^11.0.4",
-        "@libp2p/interface-connection": "^3.1.1",
-        "@libp2p/peer-id": "^2.0.3",
-        "@lumeweb/libhyperproxy": "git+https://git.lumeweb.com/LumeWeb/libhyperproxy.git",
-        "@multiformats/multiaddr": "^11.6.1",
-        "b4a": "^1.6.3",
-        "compact-encoding": "^2.11.0",
-        "debug-stream": "^3.0.1",
-        "serialize-error": "^11.0.0",
-        "stream-to-it": "^0.2.4",
-        "streamx": "^2.13.2"
+        "@lumeweb/interface-relay": "^0.0.2-develop.3",
+        "@lumeweb/libhyperproxy": "^0.0.2-develop.2"
     }
 }

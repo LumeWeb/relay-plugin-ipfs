@@ -9,7 +9,7 @@
     "readme": "ERROR: No README data found!",
     "_id": "@lumeweb/relay-plugin-ipfs@0.1.0",
     "devDependencies": {
-        "@lumeweb/presetter-relay-plugin-preset": "^0.1.0-develop.8",
+        "@lumeweb/presetter-relay-plugin-preset": "^0.1.0-develop.9",
         "presetter": "*"
     },
     "dependencies": {

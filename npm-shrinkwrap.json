@@ -12,7 +12,7 @@
                 "@lumeweb/libhyperproxy": "^0.0.2-develop.2"
             },
             "devDependencies": {
-                "@lumeweb/presetter-relay-plugin-preset": "^0.1.0-develop.8",
+                "@lumeweb/presetter-relay-plugin-preset": "^0.1.0-develop.9",
                 "presetter": "*"
             }
         },
@@ -2199,9 +2199,9 @@
             }
         },
         "node_modules/@lumeweb/presetter-relay-plugin-preset": {
-            "version": "0.1.0-develop.8",
-            "resolved": "https://registry.npmjs.org/@lumeweb/presetter-relay-plugin-preset/-/presetter-relay-plugin-preset-0.1.0-develop.8.tgz",
-            "integrity": "sha512-e5gdKTvhwgBfUJJ1UDPMtYgXZGnJE2zkznjTuvNRwA4qj6vypAo6VOpUCN5VtatazVDKQKOvtzWJwfQ409LFcQ==",
+            "version": "0.1.0-develop.9",
+            "resolved": "https://registry.npmjs.org/@lumeweb/presetter-relay-plugin-preset/-/presetter-relay-plugin-preset-0.1.0-develop.9.tgz",
+            "integrity": "sha512-JvJu+UxR1S/wbTHTkUUzlbRWaJEy8vINAmmGOXCR2gpOBB/QKYr/XLRpCbkFDdVpMlDeBg+zJFVHLzb2+nVjrA==",
             "dev": true,
             "dependencies": {
                 "@lumeweb/node-library-preset": "^0.2.7",
